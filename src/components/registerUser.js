@@ -18,7 +18,7 @@ const RegisterUser = () => {
 
     try {
       // Realiza la solicitud POST al backend para registrar el usuario
-      await axios.post('http://localhost:4001/api/users', newUser);
+      await axios.post('http://192.34.63.51:4022/api/users', newUser);
       console.log('User registered:', newUser);
       alert('User registered successfully!');
       
