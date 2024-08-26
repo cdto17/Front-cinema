@@ -50,7 +50,7 @@ Create an `.env` file in the root of the project and set the following environme
 Once the development server is up and running, you will be able to navigate through the different functionalities according to the user role you are logged in with. The administrator role will have access to all management functions, while regular users will have limited access according to the allowed functionalities.
 </p>
 
-####Connect to the Frontend :link:
+#### Connect to the Frontend :link:
 <p>
 The microservice is designed to be consumed by a frontend. Make sure to configure the backend URLs in the frontend so that authentication requests are performed correctly.
 </p>
