@@ -21,7 +21,7 @@ const UpdateSalas = () => {
     const fetchSalas = async () => {
       try {
         setLoading(true);
-        const response = await axios.get(`http://localhost:3003/api/cinemas/${id}`);
+        const response = await axios.get(`http://67.205.161.52:4020/api/cinemas/${id}`);
         setSalas(response.data);
         setLoading(false);
       } catch (err) {
@@ -43,7 +43,7 @@ const UpdateSalas = () => {
     e.preventDefault();
 
     try {
-      await axios.put(`http://localhost:3007/api/cinemas/${id}`, sala);
+      await axios.put(`http://67.205.161.52:4010/api/cinemas/${id}`, sala);
       alert('Cinema updated successfully!');
       navigate('/cinema');
     } catch (err) {

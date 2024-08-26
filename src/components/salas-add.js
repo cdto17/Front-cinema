@@ -18,7 +18,7 @@ const AddSala = () => {
     };
 
     try {
-      await axios.post('http://localhost:3005/api/cinemas', newSala);
+      await axios.post('http://67.205.161.52:4013/api/cinemas', newSala);
       alert('Cinema added successfully!');
       setName('');
       setCapacity('');

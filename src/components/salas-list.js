@@ -14,7 +14,7 @@ const SalasList = () => {
 
   const fetchSalas = async () => {
     try {
-      const response = await axios.get('http://localhost:3003/api/cinemas');
+      const response = await axios.get('http://67.205.161.52:4020/api/cinemas');
       setSalas(response.data);
     } catch (err) {
       console.error('Error fetching cinemas:', err);
@@ -24,7 +24,7 @@ const SalasList = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this cinema?')) {
       try {
-        await axios.delete(`http://localhost:3006/api/cinemas/${id}`);
+        await axios.delete(`http://67.205.161.52:4015/api/cinemas/${id}`);
         alert('Cinema deleted successfully!');
         fetchSalas(); 
       } catch (err) {
