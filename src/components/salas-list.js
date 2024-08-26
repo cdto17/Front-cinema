@@ -62,7 +62,7 @@ const SalasList = () => {
         ))}
       </div>
       <div className="home-button-container">
-        <button className="home-button" onClick={handleHomeClick}>Regresar al Home</button>
+        <button className="home-button" onClick={handleHomeClick}>Back to Home</button>
       </div>
     </div>
     </div>

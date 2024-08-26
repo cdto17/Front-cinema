@@ -45,7 +45,7 @@ const UpdateSalas = () => {
     try {
       await axios.put(`http://67.205.161.52:4010/api/cinemas/${id}`, sala);
       alert('Cinema updated successfully!');
-      navigate('/cinema');
+      navigate('/cinemas');
     } catch (err) {
       console.error('Error updating cinema:', err);
       setError('Failed to update cinema. Please try again.');
