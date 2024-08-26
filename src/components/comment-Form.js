@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom'; // Importa useNavigate
+import { useNavigate } from 'react-router-dom'; 
 import './styles/commentForm.css';
 
 const CommentForm = () => {
   const [comment, setComment] = useState('');
   const [message, setMessage] = useState('');
-  const navigate = useNavigate(); // Inicializa el hook useNavigate
+  const navigate = useNavigate(); 
 
   const handleSubmit = async (e) => {
     e.preventDefault();

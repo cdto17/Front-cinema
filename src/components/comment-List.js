@@ -30,7 +30,7 @@ const CommentList = () => {
   };
 
   const handleBackToHome = () => {
-    navigate('/'); // Redirige al home
+    navigate('/'); 
   };
 
   if (loading) return <p>Loading...</p>;

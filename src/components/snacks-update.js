@@ -22,7 +22,7 @@ const UpdateSnack = () => {
 
   useEffect(() => {
     if (role !== 'admin') {
-      navigate('/snacks'); // Redirigir si el usuario no es admin
+      navigate('/snacks'); 
       return;
     }
 
@@ -61,7 +61,7 @@ const UpdateSnack = () => {
   };
 
   const handleCancel = () => {
-    navigate('/'); // Redirigir al inicio
+    navigate('/'); 
   };
 
   if (loading) return <div>Loading...</div>;
@@ -132,7 +132,7 @@ const UpdateSnack = () => {
           />
         </label>
         <button type="submit">Update Snack</button>
-        <button type="button" onClick={handleCancel}>Cancel</button> {/* Botón de Cancelar */}
+        <button type="button" onClick={handleCancel}>Cancel</button> {}
       </form>
     </div>
   );

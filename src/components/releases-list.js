@@ -14,7 +14,7 @@ const MovieList1 = () => {
 
   const fetchMovies = async () => {
     try {
-      const response = await axios.get('http://localhost:3050/movies');
+      const response = await axios.get('http://161.35.113.179:4017/movies');
       setMovies(response.data);
     } catch (error) {
       console.error('Error fetching movies:', error);
@@ -24,7 +24,7 @@ const MovieList1 = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this movie?')) {
       try {
-        await axios.delete(`http://localhost:3050/movies/${id}`);
+        await axios.delete(`http://161.35.113.179:4017/movies/${id}`);
         setMovies(movies.filter((movie) => movie.id !== id));
       } catch (error) {
         console.error('Error deleting movie:', error);

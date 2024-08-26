@@ -36,14 +36,14 @@ const AddSnack = () => {
     try {
       await axios.post(config.BASE_URL_SNACKC, newSnack);
       alert('Snack added successfully!');
-      navigate('/'); // Redirigir al home después de agregar el snack
+      navigate('/'); 
     } catch (err) {
       console.error('Error adding snack:', err);
     }
   };
 
   const handleCancel = () => {
-    navigate('/'); // Redirigir al home cuando se presiona el botón de cancelar
+    navigate('/'); 
   };
 
   return (

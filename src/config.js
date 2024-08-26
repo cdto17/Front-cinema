@@ -3,8 +3,6 @@ const config = {
     BASE_URL_UPDATE: 'http://161.35.51.225:4003/api/movies',
     BASE_URL_DELETE: 'http://161.35.51.225:4002/api/movies',
     BASE_URL_AUTH: 'http://192.34.63.51:4000/api/auth/login',
-    BASE_URL_OFFERS: 'http://localhost:3070/api/offers',
-    BASE_URL_ROOMS: 'http://localhost:3020/api/rooms',
     BASE_URL_SNACKC: 'http://206.189.189.166:4014/api/snacks',
     BASE_URL_SNACKL: 'http://206.189.189.166:4019/api/snacks',
     BASE_URL_SNACKU: 'http://206.189.189.166:4011/api/snacks',

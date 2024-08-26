@@ -53,7 +53,7 @@ const UpdateSalas = () => {
   };
 
   const handleCancel = () => {
-    navigate('/'); // Redirigir al listado de cinemas
+    navigate('/'); 
   };
 
   if (role !== 'admin') {
@@ -98,7 +98,7 @@ const UpdateSalas = () => {
           />
         </label>
         <button type="submit">Update cinema</button>
-        <button type="button" onClick={handleCancel}>Cancel</button> {/* Botón de cancelación */}
+        <button type="button" onClick={handleCancel}>Cancel</button> {}
       </form>
     </div>
   );

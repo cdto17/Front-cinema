@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Navigation = () => {
-  const role = localStorage.getItem('role'); // Recuperar el rol del usuario
+  const role = localStorage.getItem('role'); 
 
   return (
     <div>

@@ -5,8 +5,8 @@ import './styles/releasesH.css';
 
 const ReleasesList = () => {
   const [releases, setReleases] = useState([]);
-  const navigate = useNavigate(); // Hook para la navegación
-  const role = localStorage.getItem('role'); // Recuperar el rol del usuario
+  const navigate = useNavigate(); 
+  const role = localStorage.getItem('role'); 
 
   useEffect(() => {
     if (role === 'admin') {
@@ -16,7 +16,7 @@ const ReleasesList = () => {
 
   const fetchReleases = async () => {
     try {
-      const response = await axios.get('http://localhost:3040/api/movies');
+      const response = await axios.get('http://161.35.113.179:4018/api/movies');
       setReleases(response.data);
     } catch (err) {
       console.error('Error fetching releases:', err);
@@ -24,7 +24,7 @@ const ReleasesList = () => {
   };
 
   const handleHomeClick = () => {
-    navigate('/'); // Redirigir al inicio
+    navigate('/'); 
   };
 
   if (role !== 'admin') {

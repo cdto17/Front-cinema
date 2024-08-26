@@ -18,7 +18,7 @@ const AddMovie1 = () => {
     const newMovie = { title, description, genre, releaseDate, duration };
 
     try {
-      await axios.post('http://localhost:3050/movies', newMovie);
+      await axios.post('http://161.35.113.179:4017/movies', newMovie);
       setMessage('Movie added successfully!');
       clearForm();
       setTimeout(() => navigate('/'), 500);

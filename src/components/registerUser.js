@@ -9,27 +9,26 @@ const RegisterUser = () => {
   const [password, setPassword] = useState('');
   const [first_name, setFirstName] = useState('');
   const [last_name, setLastName] = useState('');
-  const role = 'cliente'; // Rol fijo como "cliente"
-  const navigate = useNavigate(); // Inicializa el hook useNavigate
+  const role = 'cliente'; 
+  const navigate = useNavigate(); 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const newUser = { username, email, password, first_name, last_name, role };
 
     try {
-      // Realiza la solicitud POST al backend para registrar el usuario
+     
       await axios.post('http://192.34.63.51:4022/api/users', newUser);
       console.log('User registered:', newUser);
       alert('User registered successfully!');
       
-      // Limpiar el formulario después de enviar
       setUsername('');
       setEmail('');
       setPassword('');
       setFirstName('');
       setLastName('');
 
-      // Redirige al home
+     
       navigate('/');
     } catch (error) {
       console.error('Error registering user:', error);
