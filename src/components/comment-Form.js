@@ -11,7 +11,7 @@ const CommentForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3090/api/comments', { comment });
+      const response = await axios.post('http://157.230.53.93:4012/api/comments', { comment });
       setMessage(`Comment added: ${response.data.comment}`);
       setComment('');
     } catch (error) {

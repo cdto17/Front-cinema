@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './styles/offers-list.css';
-import config from '../config';
 
 const OffersList = () => {
   const [offers, setOffers] = useState([]);
@@ -9,8 +8,17 @@ const OffersList = () => {
   useEffect(() => {
     const fetchOffers = async () => {
       try {
-        const response = await axios.get(config.BASE_URL_OFFERS);
-        setOffers(response.data);
+        const response = await axios.post('http://157.230.53.93:8080', {
+          jsonrpc: '2.0',
+          method: 'listOffers',
+          id: 1
+        });
+        
+        if (response.data.result) {
+          setOffers(response.data.result);
+        } else if (response.data.error) {
+          console.error('Error fetching offers:', response.data.error);
+        }
       } catch (err) {
         console.error('Error fetching offers:', err);
       }
@@ -33,6 +41,9 @@ const OffersList = () => {
             <p><strong>End Time:</strong> {offer.end_time}</p>
           </div>
         ))}
+      </div>
+      <div className="back-to-home">
+        <button onClick={() => window.location.href = '/'}>Back to Home</button>
       </div>
     </div>
   );

@@ -13,7 +13,7 @@ const CommentList = () => {
   useEffect(() => {
     const fetchComments = async () => {
       try {
-        const response = await axios.get('http://localhost:3090/api/comments');
+        const response = await axios.get('http://157.230.53.93:4012/api/comments');
         setComments(response.data);
         setLoading(false);
       } catch (err) {
