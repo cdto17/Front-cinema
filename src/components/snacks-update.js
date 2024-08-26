@@ -29,7 +29,7 @@ const UpdateSnack = () => {
     const fetchSnack = async () => {
       try {
         setLoading(true);
-        const response = await axios.get(`http://localhost:3012/api/snacks/${id}`);
+        const response = await axios.get(`http://206.189.189.166:4019/api/snacks/${id}`);
         setSnack(response.data);
         setLoading(false);
       } catch (err) {
@@ -51,7 +51,7 @@ const UpdateSnack = () => {
     e.preventDefault();
 
     try {
-      await axios.put(`http://localhost:3013/api/snacks/${id}`, snack);
+      await axios.put(`http://206.189.189.166:4011/api/snacks/${id}`, snack);
       alert('Snack updated successfully!');
       navigate('/snacks');
     } catch (err) {

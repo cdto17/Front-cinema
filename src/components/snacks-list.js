@@ -25,7 +25,7 @@ const SnacksList = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this snack?')) {
       try {
-        await axios.delete(`http://localhost:4016/api/snacks/${id}`);
+        await axios.delete(`http://206.189.189.166:4011:4016/api/snacks/${id}`);
         alert('Snack deleted successfully!');
         fetchSnacks(); 
       } catch (err) {
