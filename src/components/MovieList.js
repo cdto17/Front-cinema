@@ -16,7 +16,7 @@ const MovieList = () => {
     genre: ''
   });
 
-  const role = localStorage.getItem('role'); // Recuperar el rol del usuario
+  const role = localStorage.getItem('role'); 
 
   useEffect(() => {
     const fetchMovies = async () => {
@@ -87,22 +87,29 @@ const MovieList = () => {
     }
   };
 
+  const handleBackToHome = () => {
+    
+    window.location.href = '/'; 
+  };
+
   return (
-    <div className="movie-list">
-      {movies.map((movie) => (
-        <div key={movie.id} className="movie-card">
-          <h3>{movie.title}</h3>
-          <p><strong>Director:</strong> {movie.director}</p>
-          <p><strong>Release Date:</strong> {new Date(movie.release_date).toLocaleDateString()}</p>
-          <p><strong>Genre:</strong> {movie.genre}</p>
-          {role === 'admin' && (
-            <>
-              <button className="edit" onClick={() => handleEditClick(movie)}>Edit</button>
-              <button className="delete" onClick={() => handleDeleteClick(movie)}>Delete</button>
-            </>
-          )}
-        </div>
-      ))}
+    <div className="movie-list-container">
+      <div className="movie-list">
+        {movies.map((movie) => (
+          <div key={movie.id} className="movie-card">
+            <h3>{movie.title}</h3>
+            <p><strong>Director:</strong> {movie.director}</p>
+            <p><strong>Release Date:</strong> {new Date(movie.release_date).toLocaleDateString()}</p>
+            <p><strong>Genre:</strong> {movie.genre}</p>
+            {role === 'admin' && (
+              <>
+                <button className="edit" onClick={() => handleEditClick(movie)}>Edit</button>
+                <button className="delete" onClick={() => handleDeleteClick(movie)}>Delete</button>
+              </>
+            )}
+          </div>
+        ))}
+      </div>
       {isEditModalOpen && (
         <Modal
           isOpen={isEditModalOpen}
@@ -144,6 +151,9 @@ const MovieList = () => {
           <button onClick={handleCloseDeleteModal}>Cancel</button>
         </Modal>
       )}
+      <div className="back-to-home">
+        <button onClick={handleBackToHome}>Back to home</button>
+      </div>
     </div>
   );
 };
