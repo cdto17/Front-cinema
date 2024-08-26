@@ -8,7 +8,7 @@ const PaymentsList = () => {
   useEffect(() => {
     const fetchPayments = async () => {
       try {
-        const response = await axios.get('http://localhost:3080/api/payments');
+        const response = await axios.get('http://157.230.53.93:4021/api/payments');
         setPayments(response.data);
       } catch (err) {
         console.error('Error fetching payments:', err);
