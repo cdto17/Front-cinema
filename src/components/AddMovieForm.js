@@ -22,7 +22,7 @@ const AddMovieForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3004/api/movies', movie);
+      const response = await axios.post('http://161.35.51.225:4099/api/movies', movie);
       console.log('Movie added:', response.data);
     } catch (err) {
       console.error('Error adding movie:', err);
